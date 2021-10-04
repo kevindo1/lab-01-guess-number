@@ -18,7 +18,7 @@ submitButton.addEventListener('click', ()=> {
     const guess = Number(inputNumber.value);
     numGuessesLeft--;
     let userMessage;
-    if(guess === randomNumber) {
+    if (guess === randomNumber) {
         userMessage = 'You win.. for now';
         submitButton.style.display = 'none';
         restartButton.style.display = 'block';
@@ -32,14 +32,14 @@ submitButton.addEventListener('click', ()=> {
         userMessage = 'Number too low';
     }
     resultText.textContent = `${userMessage}`;
-    guessesLeft.textContent = `You have ${numGuessesLeft} guesses left.`
+    guessesLeft.textContent = `You have ${numGuessesLeft} guesses left.`;
 
 });
 
 restartButton.addEventListener('click', ()=> {
     numGuessesLeft = 4;
     resultText.textContent = ':)';
-    guessesLeft.textContent = `You have ${numGuessesLeft} guesses left.`
+    guessesLeft.textContent = `You have ${numGuessesLeft} guesses left.`;
     submitButton.style.display = 'block';
     inputNumber.value = '';
     randomNumber = Math.floor(Math.random() * 20) + 1;

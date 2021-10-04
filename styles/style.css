@@ -21,7 +21,7 @@ body {
 }
 
 #result-text {
-    color: red;
+    color: blue;
     font-size: 40px;
     border: black solid 2px;
     padding: 10px;
@@ -33,4 +33,12 @@ body {
 
 #restart-button {
     display: none;
+}
+
+#win-message {
+    color: green;
+}
+
+#lose-message {
+    color: red;
 }

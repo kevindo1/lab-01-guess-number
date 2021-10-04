@@ -4,10 +4,14 @@ const submitButton = document.getElementById('submit-button');
 const resultText = document.getElementById('result-text');
 const guessesLeft = document.getElementById('guesses-left');
 const restartButton = document.getElementById('restart-button');
+const winMessage = document.getElementById('win-message');
+const loseMessage = document.getElementById('lose-message');
 
 // initialize global state
 let numGuessesLeft = 4;
 let randomNumber = Math.floor(Math.random() * 20) + 1;
+let timesWon = 0;
+let timesLost = 0;
 
 // set event listeners 
   // get user input
@@ -22,10 +26,12 @@ submitButton.addEventListener('click', ()=> {
         userMessage = 'You win.. for now';
         submitButton.style.display = 'none';
         restartButton.style.display = 'block';
+        timesWon++;
     } else if (numGuessesLeft === 0) {
         userMessage = 'Out of guesses.. goodbye';
         submitButton.style.display = 'none';
         restartButton.style.display = 'block';
+        timesLost++;
     } else if (guess > randomNumber) {
         userMessage = 'Number too high';
     } else if (guess < randomNumber) {
@@ -33,6 +39,8 @@ submitButton.addEventListener('click', ()=> {
     }
     resultText.textContent = `${userMessage}`;
     guessesLeft.textContent = `You have ${numGuessesLeft} guesses left.`;
+    winMessage.textContent = `You have won ${timesWon} time(s).`;
+    loseMessage.textContent = `You have lost ${timesLost} time(s).`;
 
 });
 

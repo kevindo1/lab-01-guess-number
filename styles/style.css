@@ -16,6 +16,14 @@ body {
     flex-direction: column;
     margin: 20px;
 }
+input {
+    border-radius: 10px;
+}
+
+#submit-button:hover {
+    cursor: grab;
+    background-color: teal;
+}
 
 #logo {
     width: 30%;
@@ -29,7 +37,7 @@ body {
 #result-text {
     color: blue;
     font-size: 40px;
-    border: black solid 2px;
+    border: blue solid 2px;
     padding: 10px;
 }
 
@@ -42,7 +50,7 @@ body {
 }
 
 #win-message {
-    color: green;
+    color: teal;
 }
 
 #lose-message {

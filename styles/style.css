@@ -1,7 +1,8 @@
 body {
     background-image: url("../assets/background.jpeg");
-    background-repeat: no-repeat;
+    background-repeat: round;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 #game { 

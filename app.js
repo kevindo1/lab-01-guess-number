@@ -6,6 +6,7 @@ const guessesLeft = document.getElementById('guesses-left');
 const restartButton = document.getElementById('restart-button');
 const winMessage = document.getElementById('win-message');
 const loseMessage = document.getElementById('lose-message');
+const music = document.getElementById('music');
 
 // initialize global state
 let numGuessesLeft = 4;
@@ -37,6 +38,7 @@ submitButton.addEventListener('click', ()=> {
     } else if (guess < randomNumber) {
         userMessage = 'Number too low';
     }
+    music.play();
     resultText.textContent = `${userMessage}`;
     guessesLeft.textContent = `You have ${numGuessesLeft} guesses left.`;
     winMessage.textContent = `You have won ${timesWon} time(s).`;

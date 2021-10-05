@@ -1,7 +1,12 @@
+@font-face {
+    font-family: Azonix;
+    src: url("../assets/Azonix.otf") format("opentype");
+}
+
 body {
     background-image: url("../assets/background.jpeg");
     background-repeat: round;
-    font-family: sans-serif;
+    font-family: 'Azonix', sans-serif;
     overflow: hidden;
 }
 
